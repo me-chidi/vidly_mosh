@@ -9,6 +9,7 @@ django-tastypie = "*"
 whitenoise = "*"
 gunicorn = "*"
 psycopg2 = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
