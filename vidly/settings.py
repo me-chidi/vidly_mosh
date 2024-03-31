@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     #added the movies app so django can recognize it
     #and then we can make migrations
     'movies.apps.MoviesConfig',
+    #added the api app for consumable apis
+    'api.apps.ApiConfig'
 ]
 
 MIDDLEWARE = [
