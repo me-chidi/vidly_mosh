@@ -1,0 +1,4 @@
+add a "fake" checkout page for your app
+after movie_id is picked
+
+also add a view for your genre app
