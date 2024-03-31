@@ -22,7 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iksnadr)3!+@2_$+#@5n0zl_cz+1-j3c*%q(si1d$k15#h8wa_'
+
+
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-iksnadr)3!+@2_$+#@5n0zl_cz+1-j3c*%q(si1d$k15#h8wa_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
@@ -84,6 +86,8 @@ WSGI_APPLICATION = 'vidly.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+#setting the db to pgs if DEBUG is True
 if not DEBUG:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
