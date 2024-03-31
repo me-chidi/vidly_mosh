@@ -13,4 +13,7 @@ python manage.py migrate
 
 #hacks through the superuser request for credentials using an 
 # env var
-python manage.py createsuperuser --no-input
+if [[ $CREATE_SUPERUSER ]];
+then
+  python manage.py createsuperuser --no-input
+fi
