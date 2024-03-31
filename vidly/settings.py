@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-iksnadr)3!+@2_$+#@5n0zl_cz+1-j3c*%q(si1d$k15#h8wa_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'vidlyrental-mosh.onrender.com',           
+]
 
 
 # Application definition
@@ -42,7 +46,7 @@ INSTALLED_APPS = [
     #and then we can make migrations
     'movies.apps.MoviesConfig',
     #added the api app for consumable apis
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
