@@ -2,3 +2,14 @@ add a "fake" checkout page for your app
 after movie_id is picked
 
 also add a view for your genre app
+
+pseudo-code preluded by #
+
+# what makes a checkout page?
+# get movie_id, daily rate 
+# display the movie and dets then checkout price beside it
+# big button to purchase > purchase successful! page
+
+# genre displays the diff movies under the diff genres in list view
+#   done but for better control flow could've made genre an app 
+#   so as to enable functionality to circle back to movies

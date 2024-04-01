@@ -5,9 +5,11 @@
         <thead>
             <tr>
                 <th>Title</th>
-                <th>Genre</th>
-            <th>Stock</th>
-            <th>Daily Rate</th>
+                <th>
+                    <a href="{% url 'movies:genre' %}">Genre</a> 
+                </th>
+                <th>Stock</th>
+                <th>Daily Rate</th>
             </tr>
         </thead>
         
@@ -18,7 +20,7 @@
                         {# instead of passing a url file location #}
                         {# we use the url tag and a nice convention (movies:detail)#}
                         {# also passing any variable beside it #}
-                        <a href="{% url "movies:detail" movie.id %}">{{movie.title}}</a>
+                        <a href="{% url 'movies:detail' movie.id %}">{{movie.title}}</a>
                     </td>
                     <td>{{movie.genre}}</td>
                     <td>{{movie.number_in_stock}}</td>

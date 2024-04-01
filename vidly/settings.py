@@ -142,7 +142,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # whitenoise line for
 # "forever-cacheable files and compression support"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

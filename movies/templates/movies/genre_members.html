@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for member in members %}
+        <ol>{{member.title}}</ol>
+    {% endfor %}
+{% endblock  %}
