@@ -5,6 +5,8 @@
 
 > later you expand on this project and make it a suitable rental site
 
+> admin link in homepage --issues with limited knowledge
+
 pseudo-code preluded by #
 
 # what makes a checkout page?
@@ -13,6 +15,7 @@ pseudo-code preluded by #
 # big button to purchase > purchase successful! page
 #   almost done, register the models in admin and create 
 #   counter functionality for movies
+#   using mysql connector i believe -later
 
 
 # genre displays the diff movies under the diff genres in list view
