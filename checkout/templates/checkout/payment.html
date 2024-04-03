@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <dl>
+        <h3>You have successfully purchased {{movie.title}}!</h3>
+        <dt>Price:</dt>
+        <dd>{{movie.daily_rate}}</dd>
+        <dt>Duration:</dt>
+        <dd>1 day</dd>
+    </dl>
+
+    <p>{{movie.title}} has been added to your library!</p>
+
+    <button>
+        <a href="{% url 'home' %}">Back to homepage</a>
+    </button>
+{% endblock %}

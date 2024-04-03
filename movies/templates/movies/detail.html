@@ -9,4 +9,8 @@
         <dt>Stock</dt>
         <dd>{{movie.number_in_stock}}</dd>
     </dl>
+
+    <button>
+        <a href="{% url 'checkout:index' movie.id %}">Purchase movie</a>
+    </button>
 {% endblock  %}

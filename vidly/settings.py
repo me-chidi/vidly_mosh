@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'movies.apps.MoviesConfig',
     #added the api app for consumable apis
     'api.apps.ApiConfig',
+    'checkout.apps.CheckoutConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h5>Purchase {{movie.title}}?</h5>
+    <br>
+    <p>Duration: 1 day </p> 
+    {# js here to do the math but too lazy to add that functionality #}
+    <p>Price: ${{movie.daily_rate}} * Duration</p>
+    <p style="margin-left: 40px;">= ${{movie.daily_rate}}</p>
+    <button>
+        <a href="{% url 'checkout:payment' movie.id %}">Checkout</a>
+    </button>
+{% endblock  %}

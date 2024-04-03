@@ -1,7 +1,9 @@
-add a "fake" checkout page for your app
-after movie_id is picked
+> add a "fake" checkout page for your app
+> after movie_id is picked
 
-also add a view for your genre app
+> also add a view for your genre app
+
+> later you expand on this project and make it a suitable rental site
 
 pseudo-code preluded by #
 
@@ -9,6 +11,9 @@ pseudo-code preluded by #
 # get movie_id, daily rate 
 # display the movie and dets then checkout price beside it
 # big button to purchase > purchase successful! page
+#   almost done, register the models in admin and create 
+#   counter functionality for movies
+
 
 # genre displays the diff movies under the diff genres in list view
 #   done but for better control flow could've made genre an app 
