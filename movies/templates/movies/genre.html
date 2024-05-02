@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Genres</h2>
+    <h2>GENRES</h2>
     {% for genre in genres%}
         <ul>
             <a href="{% url 'movies:genre_members' genre.id %}">{{genre.name}}</a>

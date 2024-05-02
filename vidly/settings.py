@@ -35,9 +35,13 @@ ALLOWED_HOSTS = [
     'vidlyrental-mosh.onrender.com',           
 ]
 
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,9 +55,11 @@ INSTALLED_APPS = [
     #added the api app for consumable apis
     'api.apps.ApiConfig',
     'checkout.apps.CheckoutConfig',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -97,8 +103,11 @@ if not DEBUG:
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'vidly',
+            'HOST': 'localhost',
+            'USER': 'root',
+            'PASSWORD': 'soqmadiq3'
         }
     }
 

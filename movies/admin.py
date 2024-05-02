@@ -12,7 +12,7 @@ class GenreAdmin(admin.ModelAdmin):
 class MovieAdmin(admin.ModelAdmin):
     #TL; defs the cols to be excluded data type is tuple
     exclude = ('date_created',)
-    list_display = ('title', 'number_in_stock', 'daily_rate')
+    list_display = ('title', 'number_in_stock', 'daily_rate', 'genre')
 
 #after that you register the models
 admin.site.register(Genre, GenreAdmin)

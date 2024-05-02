@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from api.models import MovieResource
 from . import views
+import debug_toolbar
 
+admin.site.site_header = 'VidlyAdmin'
+admin.site.index_title = 'Vidly'
 movie_resource = MovieResource()    
 
 urlpatterns = [
@@ -27,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('movies/', include('movies.urls')),
     path('api/', include(movie_resource.urls)),
-    path('checkout/', include('checkout.urls'))
+    path('checkout/', include('checkout.urls')),
+    path('__debug__/', include(debug_toolbar.urls)),
 ]
   
