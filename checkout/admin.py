@@ -1,18 +1,9 @@
 from django.contrib import admin
-from .models import Checkout, CheckoutItem
-from django.contrib.contenttypes.admin import GenericTabularInline
-from movies.models import Movie, Genre
+from .models import Checkout
 # Register your models here.
-
-class CheckoutItemInline(GenericTabularInline):
-    min_num = 1
-    max_num = 5
-    model = CheckoutItem
-    autocomplete_fields = ['checkout']
 
 @admin.register(Checkout)
 class CheckoutAdmin(admin.ModelAdmin):
     list_display = ['id', 'date_created', 'payment_status', 'duration']
-    inlines = [CheckoutItemInline] 
     search_fields = ['id']
     exclude = ('date_created',)

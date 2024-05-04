@@ -39,12 +39,15 @@ class MovieAdmin(admin.ModelAdmin):
     #TL; defs the cols to be excluded data type is tuple
     autocomplete_fields = ['genre']
     exclude = ('date_created',)
+    search_fields = ['title__icontains', 'year']
     list_display = ['title', 'release_year', 'number_in_stock', 'daily_rate', 'genre']
-    search_fields = ['title__istartswith', 'year']
     list_per_page = 10
     list_editable = ['number_in_stock', 'daily_rate']
+    # readonly_fields = ['genre_read']
 
-    def genre(self, genre):
+    # make a list filter by genre instead
+    @admin.display(description='genre')
+    def genre_read(self, genre):
         url = (
             reverse('admin:movie_movie_changelist')
             + '?'
@@ -52,5 +55,5 @@ class MovieAdmin(admin.ModelAdmin):
                 'genre_id': str(genre.id)
             })
         )
-        return format_html('<a href="{}"></a>', url, genre.name)
+        return format_html('<a href="{}">{}</a>', url, genre.name)
     

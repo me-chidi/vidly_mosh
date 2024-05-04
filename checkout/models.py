@@ -19,7 +19,7 @@ class Checkout(models.Model):
 
     payment_status = models.CharField(
             max_length=1, choices=PAYMENT_STATUS_CHOICES, default=PAYMENT_STATUS_PENDING)
-    date_created = models.DateTimeField(default=timezone.now)
+    date_created = models.DateTimeField(auto_now_add=True)
     duration = models.PositiveSmallIntegerField(default=None, null=True) 
     
     # @classmethod
