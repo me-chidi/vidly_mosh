@@ -8,12 +8,11 @@ class CheckoutItemInline(GenericTabularInline):
     min_num = 1
     max_num = 5
     model = CheckoutItem
-    autocomplete_fields = ['content_type']
+    autocomplete_fields = ['checkout']
 
 @admin.register(Checkout)
 class CheckoutAdmin(admin.ModelAdmin):
-    list_display = ['id',  'date_created']
+    list_display = ['id', 'date_created', 'payment_status', 'duration']
     inlines = [CheckoutItemInline] 
-    search_fields = ['content_type']
+    search_fields = ['id']
     exclude = ('date_created',)
-

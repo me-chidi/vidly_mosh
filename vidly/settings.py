@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'checkout.apps.CheckoutConfig',
     'debug_toolbar',
+    'checkout_custom',
 ]
 
 MIDDLEWARE = [

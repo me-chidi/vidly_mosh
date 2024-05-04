@@ -22,14 +22,14 @@ class Checkout(models.Model):
     date_created = models.DateTimeField(default=timezone.now)
     duration = models.PositiveSmallIntegerField(default=None, null=True) 
     
-    @classmethod
-    def _duration(cls, self):
-        self.end = timedelta(days=1) + self.date_created
+    # @classmethod
+    def _duration(self, cls, dur):
+        self.end = timedelta(days=dur) + self.date_created
         if self.duration:
             cls.date_end = models.DateTimeField(default=self.end, null=True)
 
     def __str__(self):
-        return str(self.id)
+        return f'Checkout ID: {self.id}'
 
 
 class CheckoutItem(models.Model):
@@ -37,6 +37,9 @@ class CheckoutItem(models.Model):
     object_id = models.PositiveIntegerField()
     content_type = models.ForeignKey(ContentType, on_delete=models.PROTECT)
     content_object = GenericForeignKey()
+
+    def __str__(self):
+        return f'{self.content_object}'
         
 
 
