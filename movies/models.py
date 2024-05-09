@@ -12,8 +12,8 @@ class Genre(models.Model):
 
 class Movie(models.Model):
     title = models.CharField(max_length=255)
-    release_year = models.IntegerField()
-    number_in_stock = models.IntegerField()
+    release_year = models.IntegerField(validators=[MinValueValidator(1900)])
+    number_in_stock = models.IntegerField(validators=[MinValueValidator(0)])
     daily_rate = models.DecimalField(
         max_digits=4, decimal_places=2, validators=[MinValueValidator(1)])
     #TL; creating a rship with the Genre class e.g one-to-one rship
@@ -28,3 +28,5 @@ class Movie(models.Model):
 
     def __str__(self):
         return self.title
+    # kobichimdi
+    # sochima
