@@ -1,9 +1,16 @@
-> add a "fake" checkout page for your app
-> after movie_id is picked
+> add a "fake" checkout page for your app../
+    after movie_id is picked../
 
-> also add a view for your genre app
+> also add a view for your genre app../
 
 > later you expand on this project and make it a suitable rental site
+
+> issues with adding a checkout and its items not implicitily
+    taking the checkout ID in the admin site [ULD1_end]
+
+> date_end column not being created in the db even when duration
+    is specified from the admin site --solution might be in views
+    for both the admin and user sites [ULD1_end]
 
 > admin link in homepage --issues with limited knowledge
 

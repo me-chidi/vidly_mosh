@@ -26,7 +26,6 @@ class DurationFilter(admin.SimpleListFilter):
             return queryset.filter(duration__lt=90)
         
 
-
 @admin.register(Checkout)
 class CheckoutAdmin(admin.ModelAdmin):
     list_display = ['id', 'date_created', 'payment_status', 'duration']
